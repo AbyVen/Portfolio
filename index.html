@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abhilash Venugopal • Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="Primary navigation">
+      <div class="sidebar__header">
+        <a href="#top" class="sidebar__logo">AbyVen</a>
+        <p class="sidebar__subtitle">Web Developer</p>
+      </div>
+
+      <nav class="sidebar__nav">
+        <ul class="sidebar__nav-list">
+          <li><a href="#works" class="sidebar__nav-link">Works</a></li>
+          <li><a href="#about" class="sidebar__nav-link">About</a></li>
+          <li><a href="#skills" class="sidebar__nav-link">Skills</a></li>
+          <li><a href="#contact" class="sidebar__nav-link">Contact</a></li>
+          <li><button id="resumeBtn" class="sidebar__btn">Resume</button></li>
+          <li><button id="darkModeToggle" class="sidebar__btn" aria-pressed="false">Dark Mode</button></li>
+        </ul>
+      </nav>
+
+      <ul class="social-list" aria-label="Social links">
+        <li><a href="https://github.com/AbyVen" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/abhilash-venugopal-4bb006244/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content" id="top" tabindex="-1">
+      
+      <!-- Intro -->
+      <section id="intro" class="section fade-up">
+        <h1>Hi, I'm Abhilash Venugopal</h1>
+        <p>I'm a passionate web developer specializing in building clean and performant web experiences. I love turning ideas into reality through code.</p>
+      </section>
+
+      <!-- Works -->
+      <section id="works" class="section fade-up">
+        <h2>Works</h2>
+        <p class="section-subtitle">Some projects I’ve worked on recently.</p>
+        <div class="grid">
+          <article class="card">
+            <h3>Project A</h3>
+            <p>Project description goes here.</p>
+          </article>
+          <article class="card">
+            <h3>Project B</h3>
+            <p>Project description goes here.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section fade-up">
+        <h2>About Me</h2>
+        <p>
+          I’m Abhilash Venugopal, a self-taught web developer passionate about crafting clean, functional, and user-friendly websites. My journey began with curiosity—tinkering with HTML and CSS—and has grown into a dedication to building complete, responsive web experiences. I specialize in turning ideas into interactive websites using modern web technologies, and I’m constantly learning to improve my skills. As I step into freelancing, my goal is simple: help individuals and businesses bring their vision online through well-designed, high-performance websites.
+        </p>
+      </section>
+
+      <!-- Skills & Tools -->
+      <section id="skills" class="section fade-up">
+        <h2>Skills & Tools</h2>
+        <p class="section-subtitle">Technologies I use to bring ideas to life.</p>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 Logo" />
+            <span>HTML5</span>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 Logo" />
+            <span>CSS3</span>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Logo" />
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Logo" />
+            <span>React</span>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git Logo" />
+            <span>Git</span>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Logo" />
+            <span>GitHub</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section fade-up">
+        <h2>Contact</h2>
+        <form action="mailto:you@example.com" method="post" enctype="text/plain" class="form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">&copy; <span id="year"></span> Abhilash Venugopal</footer>
+    </main>
+  </div>
+
+  <!-- Resume Modal -->
+  <div id="resumeModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="resumeTitle" hidden>
+    <div class="modal__content">
+      <button id="closeResume" class="modal__close" aria-label="Close Resume">&times;</button>
+      <iframe src="YOUR_RESUME.pdf" title="Resume PDF" class="modal__iframe"></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
