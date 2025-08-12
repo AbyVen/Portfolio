@@ -59,6 +59,7 @@ button {
     display: flex;
     width: 100%;
     height: 100vh;
+    position: relative;
 }
 
 .sidebar {
@@ -238,11 +239,11 @@ button[type="submit"]:hover {
 .modal {
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 50;
+    z-index: 1000;
 }
 
 .modal[hidden] {
@@ -250,29 +251,32 @@ button[type="submit"]:hover {
 }
 
 .modal__content {
-    background: var(--bg);
-    width: 90vw;
+    position: relative;
+    width: 80%;
     max-width: 900px;
-    height: 90vh;
+    height: 90%;
+    background: var(--bg);
     border-radius: var(--radius);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    position: relative;
+}
+
+.modal__iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    flex-grow: 1;
 }
 
 .modal__close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 8px;
+    right: 12px;
     font-size: 2rem;
     background: none;
     border: none;
     cursor: pointer;
-}
-
-.modal__iframe {
-    flex-grow: 1;
-    border: none;
 }
 
 /* =========================================================
@@ -320,16 +324,6 @@ button[type="submit"]:hover {
 /* =========================================================
    SKILLS / TOOLS
 ========================================================= */
-.skills {
-    margin-top: 2rem;
-}
-
-.sidebar__section-title {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
@@ -386,68 +380,9 @@ button[type="submit"]:hover {
     .social-list {
         display: none;
     }
-}
 
-.footer {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    padding: 1rem 0;
-    color: rgb(114, 198, 226);
-    background: none;
-    position: center;
-    bottom: 100%;
-    left: 50%;
-}
-
-.app {
-    position: relative;
-    /* Ensure .app is positioned for absolute children */
-}
-
-/* Mobile-first adjustments */
-@media (max-width: 768px) {
-    .app {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        position: static;
-        width: 100%;
-        text-align: center;
-    }
-
-    .sidebar__nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-
-    .content {
-        padding: 1rem;
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-
-    .skill-item img {
-        width: 50px;
-        height: 50px;
-    }
-
-    h1,
-    h2,
-    h3,
-    p {
-        text-align: center;
-    }
-
-    /* Modal should fit mobile screens */
+    /* Modal on mobile */
     .modal__iframe {
-        width: 100%;
         height: 80vh;
     }
 }
@@ -456,4 +391,11 @@ button[type="submit"]:hover {
     .skills-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    color: rgb(114, 198, 226);
 }

@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeKey = 'theme';
     const yearEl = document.getElementById('year');
     const toggle = document.getElementById('darkModeToggle');
-    const modal = document.getElementById('resumeModal');
     const resumeBtn = document.getElementById('resumeBtn');
-    const closeBtn = document.getElementById('closeResume');
+    const resumeModal = document.getElementById('resumeModal');
+    const closeResume = document.getElementById('closeResume');
 
     /* ====== Set Current Year ====== */
     yearEl.textContent = new Date().getFullYear();
@@ -35,24 +35,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ====== Resume Modal ====== */
-    const openModal = () => {
-        modal.hidden = false;
-        modal.focus();
-    };
-    const closeModal = () => {
-        modal.hidden = true;
-        resumeBtn.focus();
-    };
-
-    resumeBtn.addEventListener('click', openModal);
-    closeBtn.addEventListener('click', closeModal);
-
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal();
+    resumeBtn.addEventListener('click', () => {
+        resumeModal.hidden = false;
+        document.body.style.overflow = 'hidden'; // prevent background scroll
     });
 
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !modal.hidden) closeModal();
+    closeResume.addEventListener('click', () => {
+        resumeModal.hidden = true;
+        document.body.style.overflow = '';
+    });
+
+    // Close modal when clicking outside content
+    resumeModal.addEventListener('click', (e) => {
+        if (e.target === resumeModal) {
+            resumeModal.hidden = true;
+            document.body.style.overflow = '';
+        }
     });
 
     /* ====== Fade-up Animation ====== */
