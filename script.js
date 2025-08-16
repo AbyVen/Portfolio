@@ -68,3 +68,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
 });
+
+/* ====== Mobile Nav Toggle ====== */
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const sidebar = document.querySelector('.sidebar');
+const sidebarNav = document.getElementById('sidebarNav');
+
+if (hamburgerBtn && sidebar && sidebarNav) {
+    hamburgerBtn.addEventListener('click', () => {
+        const isOpen = sidebar.classList.toggle('open');
+        hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+}
