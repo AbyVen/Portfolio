@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ====== Resume Modal ====== */
     resumeBtn.addEventListener('click', () => {
         resumeModal.hidden = false;
-        document.body.style.overflow = 'hidden'; // prevent background scroll
+        document.body.style.overflow = 'hidden';
     });
 
     closeResume.addEventListener('click', () => {
@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     });
 
-    // Close modal when clicking outside content
     resumeModal.addEventListener('click', (e) => {
         if (e.target === resumeModal) {
             resumeModal.hidden = true;
@@ -59,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('show');
-                    observer.unobserve(entry.target); // Unobserve after animation
+                    observer.unobserve(entry.target);
                 }
             });
         },
@@ -75,8 +74,20 @@ const sidebar = document.querySelector('.sidebar');
 const sidebarNav = document.getElementById('sidebarNav');
 
 if (hamburgerBtn && sidebar && sidebarNav) {
+    // Toggle menu open/close
     hamburgerBtn.addEventListener('click', () => {
         const isOpen = sidebar.classList.toggle('open');
         hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Auto-close menu when a nav link is clicked
+    const navLinks = sidebarNav.querySelectorAll('a, button');
+    navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            if (sidebar.classList.contains('open')) {
+                sidebar.classList.remove('open');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
     });
 }
