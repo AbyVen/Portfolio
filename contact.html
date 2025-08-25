@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="contact-page">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact • My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="contact-page">
+  <!-- Navbar -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="index.html">AbyVen</a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <main class="section container grid two-col contact-grid">
+    <section class="animate-on-scroll slide-left">
+      <h1>Contact</h1>
+      <p class="muted">Have a project or question? Send me a message below.</p>
+
+      <form class="contact-form card shadow" action="#" method="post">
+        <div class="form-row animate-on-scroll slide-up">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your full name" required />
+        </div>
+        <div class="form-row animate-on-scroll slide-up">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-row animate-on-scroll slide-up">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="How can I help?" required></textarea>
+        </div>
+        <button class="btn primary animate-on-scroll slide-up" type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="card shadow contact-aside animate-on-scroll slide-right">
+      <h3>Connect</h3>
+      <ul class="socials">
+        <li>
+          <a class="icon-link" href="https://github.com/AbyVen" target="_blank" aria-label="GitHub">
+            <span>github.com/AbyVen</span>
+          </a>
+        </li>
+        <li>
+          <a class="icon-link" href="https://www.linkedin.com/in/abhilash-venugopal-4bb006244/" target="_blank" aria-label="LinkedIn">
+            <span>linkedin.com/in/abhilash-venugopal</span>
+          </a>
+        </li>
+        <li>
+          <a class="icon-link" href="mailto:abhilash.rvvk@gmail.com" aria-label="Email">
+            <span>abhilash.rvvk@gmail.com</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Abhilash Venugopal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back-to-Top -->
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

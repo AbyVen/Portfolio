@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="about-page">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About • My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="about-page">
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="index.html">AbyVen</a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About Section -->
+    <section class="section container grid two-col about-grid">
+      <div class="about-photo card shadow animate-on-scroll slide-right">
+        <img src="images/profile.png" alt="Profile photo" />
+      </div>
+
+      <div class="animate-on-scroll slide-left">
+        <h1>About Me</h1>
+        <p>
+          Hi, I’m <strong>Abhilash Venugopal</strong>, a passionate Web Developer.  
+          I focus on front-end technologies and enjoy crafting user-friendly, efficient websites 
+          with clean UI/UX, maintainable code, and a touch of creativity.
+        </p>
+
+        <h2>Skills</h2>
+
+        <div class="skill"><span>HTML5</span><div class="progress"><span style="--val: 95%"></span></div></div>
+        <div class="skill"><span>CSS3 / Flexbox / Grid</span><div class="progress"><span style="--val: 92%"></span></div></div>
+        <div class="skill"><span>JavaScript</span><div class="progress"><span style="--val: 85%"></span></div></div>
+        <div class="skill"><span>Bootstrap</span><div class="progress"><span style="--val: 80%"></span></div></div>
+        <div class="skill"><span>React.js</span><div class="progress"><span style="--val: 75%"></span></div></div>
+        <div class="skill"><span>Python / Django</span><div class="progress"><span style="--val: 70%"></span></div></div>
+
+        <a class="btn primary" href="projects.html">See Projects</a>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="section container resume-section animate-on-scroll fade-in">
+      <h2>Resume</h2>
+      <p>Here’s a snapshot of my professional journey. You can download the full version below.</p>
+
+      <div class="resume-timeline">
+        <div class="resume-item animate-on-scroll slide-up">
+          <h3>Front-End Developer</h3><span class="muted">2023 – Present</span>
+          <p>Creating responsive websites and UI systems for businesses and SaaS products.</p>
+        </div>
+        <div class="resume-item animate-on-scroll slide-up">
+          <h3>Freelance Web Developer</h3><span class="muted">2021 – 2023</span>
+          <p>Delivered client websites, personal portfolios, and micro-apps using HTML, CSS, JavaScript, and Django.</p>
+        </div>
+        <div class="resume-item animate-on-scroll slide-up">
+          <h3>Bachelor’s in Computer Science</h3><span class="muted">Graduated 2021</span>
+          <p>Studied software engineering, algorithms, and UI/UX fundamentals.</p>
+        </div>
+      </div>
+
+      <a class="btn primary" href="images/Abhilashvenugopal.pdf" download>Download Resume</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Abhilash Venugopal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back-to-Top -->
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- Central Script -->
+  <script src="script.js"></script>
+</body>
+</html>

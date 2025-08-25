@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="projects-page">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects • My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="projects-page">
+  <!-- Navbar -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="index.html">AbyVen</a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <header class="section-head animate-on-scroll fade-in">
+      <h1>Projects</h1>
+      <p class="muted">A selection of work highlighting skills and creativity.</p>
+    </header>
+
+    <!-- Projects Grid -->
+    <section class="projects-grid">
+      <article class="project-card animate-on-scroll slide-up">
+        <div class="thumb"><img src="images/project1.jpg" alt="Project 1" /></div>
+        <div class="project-body">
+          <h3>Online Job Portal</h3>
+          <p>A Django-powered system for job seekers and employers.</p>
+          <a class="btn small primary" href="#project-detail-1">View</a>
+        </div>
+      </article>
+
+      <article class="project-card animate-on-scroll slide-up">
+        <div class="thumb"><img src="images/project2.jpg" alt="Project 2" /></div>
+        <div class="project-body">
+          <h3>Portfolio Website</h3>
+          <p>Responsive personal portfolio with storytelling animations.</p>
+          <a class="btn small primary" href="#project-detail-2">View</a>
+        </div>
+      </article>
+
+      <article class="project-card animate-on-scroll slide-up">
+        <div class="thumb"><img src="images/project3.jpg" alt="Project 3" /></div>
+        <div class="project-body">
+          <h3>AI Automation Tool</h3>
+          <p>Python-based automation solution for real-world workflows.</p>
+          <a class="btn small primary" href="#project-detail-3">View</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- Apple-style storytelling details -->
+    <section id="project-detail-1" class="project-detail">
+      <div class="story-inner">
+        <h2>Online Job Portal</h2>
+        <p>
+          This platform connects job seekers with employers. Users can
+          register, upload resumes, browse jobs, and apply. Employers can post
+          jobs and manage applications.
+        </p>
+        <p>
+          <strong>Problem Solved:</strong> Simplified hiring workflow and
+          improved access to opportunities.
+        </p>
+      </div>
+    </section>
+
+    <section id="project-detail-2" class="project-detail">
+      <div class="story-inner">
+        <h2>Portfolio Website</h2>
+        <p>
+          A clean, modern portfolio site showcasing skills, resume, and projects.
+          Features subtle animations and storytelling-inspired navigation.
+        </p>
+        <p>
+          <strong>Problem Solved:</strong> Creates a professional online identity
+          that’s visually engaging and accessible across devices.
+        </p>
+      </div>
+    </section>
+
+    <section id="project-detail-3" class="project-detail">
+      <div class="story-inner">
+        <h2>AI Automation Tool</h2>
+        <p>
+          Python-driven automation platform to streamline repetitive business
+          tasks. Integrated with APIs for scalability and efficiency.
+        </p>
+        <p>
+          <strong>Problem Solved:</strong> Saves hours of manual effort,
+          increasing productivity and accuracy.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Abhilash Venugopal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back-to-Top -->
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
